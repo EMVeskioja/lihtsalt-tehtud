@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: content}">
+<main class="container">
+  <header class="pagehead">
+    <h1>Contact</h1>
+    <p class="lead">Tell me what you’re trying to handle, where it breaks, and who uses it daily.</p>
+  </header>
+
+  <section class="section">
+    <div class="cols2">
+      <div class="card">
+        <h2 class="h3">Write this</h2>
+        <ul class="list">
+          <li>What happens weekly that needs tracking</li>
+          <li>Who needs the report (KOV, partner, board, internal)</li>
+          <li>What “done” looks like in 30 days</li>
+        </ul>
+        <h2 class="h3" style="margin-top:18px">Don’t write this</h2>
+        <ul class="list">
+          <li>Long history, drama, or full policy text</li>
+          <li>Sensitive personal data</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <form class="form" method="post" action="#" onsubmit="return false;">
+          <label> Name
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label> Email
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label> Organisation
+            <input type="text" name="org" autocomplete="organization">
+          </label>
+          <label> Message
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+          <label class="checkline">
+            <input type="checkbox" required>
+            <span>I understand not to include sensitive personal data.</span>
+          </label>
+          <button class="btn btn-primary" type="submit">Send</button>
+          <p class="small muted">Expected response time: 1–2 working days.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+</html>

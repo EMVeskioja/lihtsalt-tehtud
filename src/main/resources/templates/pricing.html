@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: content}">
+<main class="container">
+  <header class="pagehead">
+    <h1>Packages</h1>
+    <p class="lead">Fixed scope. Clear boundaries. Calm delivery.</p>
+  </header>
+
+  <section class="section">
+    <div class="cols3">
+      <div class="card">
+        <h2 class="h3">Starter</h2>
+        <p class="muted">“Get the basics working end‑to‑end.”</p>
+        <ul class="list">
+          <li><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><use href="#lt-check-only"></use></svg>1 workflow mapped</li>
+          <li><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><use href="#lt-check-only"></use></svg>Intake + tracking</li>
+          <li><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><use href="#lt-check-only"></use></svg>Basic report export</li>
+        </ul>
+        <p class="small muted">Not for: complex multi-unit systems.</p>
+      </div>
+
+      <div class="card">
+        <h2 class="h3">Partner Pack</h2>
+        <p class="muted">“KOV/partner-ready reporting in one place.”</p>
+        <ul class="list">
+          <li><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><use href="#lt-check-only"></use></svg>Evidence folder structure</li>
+          <li><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><use href="#lt-check-only"></use></svg>Monthly reporting kit</li>
+          <li><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><use href="#lt-check-only"></use></svg>Partner slot module</li>
+        </ul>
+        <p class="small muted">Not for: data that requires special permits.</p>
+      </div>
+
+      <div class="card">
+        <h2 class="h3">Ongoing Ops</h2>
+        <p class="muted">“Keep it alive with light maintenance.”</p>
+        <ul class="list">
+          <li><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><use href="#lt-check-only"></use></svg>Monthly review + fixes</li>
+          <li><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><use href="#lt-check-only"></use></svg>Reporting delivered</li>
+          <li><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><use href="#lt-check-only"></use></svg>Small iteration queue</li>
+        </ul>
+        <p class="small muted">Not for: unlimited requests.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Boundaries (always)</h2>
+      <p class="muted">Keeps delivery fast and the relationship sane.</p>
+    </div>
+    <div class="card">
+      <ul class="list">
+        <li><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><use href="#lt-check-only"></use></svg>No sensitive personal data.</li>
+        <li><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><use href="#lt-check-only"></use></svg>Scope written before build starts.</li>
+        <li><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><use href="#lt-check-only"></use></svg>Deliverables are tangible: docs, forms, flows, reports.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section cta">
+    <div class="card">
+      <h2>Let’s scope it in 20 minutes</h2>
+      <p class="muted">If we’re a fit, you’ll get a one‑pager and a fixed sprint plan.</p>
+      <a class="btn btn-primary" th:href="@{/contact}">Contact</a>
+    </div>
+  </section>
+</main>
+</html>
