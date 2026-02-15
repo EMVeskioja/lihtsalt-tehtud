@@ -1,88 +1,48 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: content}">
-<main class="container">
-  <section class="hero">
-    <div class="hero-copy">
-      <h1>Done-for-you digital systems that make small teams breathe.</h1>
-      <p class="lead">Clear structure, clean documentation, and tools that actually get used.</p>
-      <div class="actions">
-        <a class="btn btn-primary" th:href="@{/contact}">Book a 20‑min call</a>
-        <a class="btn btn-ghost" th:href="@{/services}">See what I build</a>
+<html lang="et" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout :: layout(~{::main}, ${title}, ${description}, ${canonicalUrl}, ${ogTitle}, ${ogDescription})}">
+<main>
+  <section class="container section">
+
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>Kui asi on segane, teeme selle selgeks.</h1>
+        <p class="lead">Selged sammud. Konkreetne plaan. Asjad saavad paika — rahulikult.</p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/contact">Võta ühendust</a>
+          <a class="btn btn-ghost" href="#rada">Vali oma rada</a>
+        </div>
       </div>
-      <div class="microproof">
-        <span class="pill"><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><use href="#lt-check-only"></use></svg>Scope is explicit.</span>
-        <span class="pill"><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><use href="#lt-check-only"></use></svg>No fluff.</span>
-        <span class="pill"><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><use href="#lt-check-only"></use></svg>Fast install.</span>
+    </section>
+
+    <section id="rada" class="section">
+      <header class="section-head">
+        <h2>Vali oma rada</h2>
+        <p class="muted">Sama selgus. Erinev päris elu.</p>
+      </header>
+
+      <div class="grid-3">
+        <a class="card card-link" href="/mtu">
+          <h3>MTÜ</h3>
+          <p class="muted">Vabatahtlikud, projektid, aruanded.</p>
+          <span class="card-cta">Vaata</span>
+        </a>
+
+        <a class="card card-link" href="/kov">
+          <h3>KOV</h3>
+          <p class="muted">Partnerid, teenused, ülevaade.</p>
+          <span class="card-cta">Vaata</span>
+        </a>
+
+        <a class="card card-link" href="/ettevote">
+          <h3>Ettevõte</h3>
+          <p class="muted">Kliendid, tellimused, tööpäev.</p>
+          <span class="card-cta">Vaata</span>
+        </a>
       </div>
-    </div>
+    </section>
 
-    <div class="hero-card">
-      <div class="card">
-        <h2 class="h3">What I actually do</h2>
-        <ul class="list">
-          <li><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><use href="#lt-check-only"></use></svg>Service map 1‑pager + folder structure</li>
-          <li><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><use href="#lt-check-only"></use></svg>Simple intake → tracking → reporting flow</li>
-          <li><svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><use href="#lt-check-only"></use></svg>Monthly PDF report output (ready for KOV / partners)</li>
-        </ul>
-        <a class="btn btn-secondary" th:href="@{/pricing}">View packages</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-head">
-      <h2>How it works</h2>
-      <p class="muted">Three steps. No mystery phase.</p>
-    </div>
-
-    <div class="cols3">
-      <div class="card">
-        <h3>1) Map</h3>
-        <p>We write the workflow down in plain language and agree on boundaries.</p>
-      </div>
-      <div class="card">
-        <h3>2) Build</h3>
-        <p>We ship the minimum system that works end‑to‑end.</p>
-      </div>
-      <div class="card">
-        <h3>3) Run</h3>
-        <p>Light maintenance + reporting so it stays alive.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section soft">
-    <div class="section-head">
-      <h2>Proof (placeholders)</h2>
-      <p class="muted">Replace with real numbers as soon as you have baseline.</p>
-    </div>
-
-    <div class="metrics">
-      <div class="metric"><div class="big">10–14 days</div><div class="muted">typical setup sprint</div></div>
-      <div class="metric"><div class="big">1 folder</div><div class="muted">evidence + reporting structure</div></div>
-      <div class="metric"><div class="big">0 hype</div><div class="muted">just delivery</div></div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-head">
-      <h2>FAQ</h2>
-      <p class="muted">Blunt answers. Saves time for everyone.</p>
-    </div>
-
-    <details class="faq"><summary>Do you do ads?</summary><p>No. I build the system and the clarity so your work can be found and booked. If you need ads later, we add them intentionally.</p></details>
-    <details class="faq"><summary>Will this turn into a giant software project?</summary><p>No. The goal is a small system that a tired human can actually run.</p></details>
-    <details class="faq"><summary>Can you work with KOV / MTÜ workflows?</summary><p>Yes — non-sensitive intake, tracking, and reporting is the core.</p></details>
-    <details class="faq"><summary>What do you need from me?</summary><p>One point-person and honest access to how things actually run.</p></details>
-    <details class="faq"><summary>How do we start?</summary><p>A 20-minute call. If it’s a fit, you get a 1‑page plan and a fixed-scope sprint.</p></details>
-  </section>
-
-  <section class="section cta">
-    <div class="card">
-      <h2>Want it handled?</h2>
-      <p class="muted">If your team is drowning in “someone should track this,” this is for you.</p>
-      <a class="btn btn-primary" th:href="@{/contact}">Book a 20‑min call</a>
-    </div>
   </section>
 </main>
 </html>

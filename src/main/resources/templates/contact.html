@@ -1,50 +1,44 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: content}">
-<main class="container">
-  <header class="pagehead">
-    <h1>Contact</h1>
-    <p class="lead">Tell me what you’re trying to handle, where it breaks, and who uses it daily.</p>
-  </header>
+<html lang="et" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout :: layout(~{::main}, ${title}, ${description}, ${canonicalUrl}, ${ogTitle}, ${ogDescription})}">
+<main>
+  <section class="container section">
 
-  <section class="section">
-    <div class="cols2">
-      <div class="card">
-        <h2 class="h3">Write this</h2>
-        <ul class="list">
-          <li>What happens weekly that needs tracking</li>
-          <li>Who needs the report (KOV, partner, board, internal)</li>
-          <li>What “done” looks like in 30 days</li>
-        </ul>
-        <h2 class="h3" style="margin-top:18px">Don’t write this</h2>
-        <ul class="list">
-          <li>Long history, drama, or full policy text</li>
-          <li>Sensitive personal data</li>
-        </ul>
-      </div>
+    <header class="section-head">
+      <h1>Kontakt</h1>
+      <p class="lead">Kirjelda lühidalt, mis vajab selgust. Vastan kiiresti.</p>
+    </header>
 
-      <div class="card">
-        <form class="form" method="post" action="#" onsubmit="return false;">
-          <label> Name
-            <input type="text" name="name" autocomplete="name" required>
-          </label>
-          <label> Email
-            <input type="email" name="email" autocomplete="email" required>
-          </label>
-          <label> Organisation
-            <input type="text" name="org" autocomplete="organization">
-          </label>
-          <label> Message
-            <textarea name="message" rows="6" required></textarea>
-          </label>
-          <label class="checkline">
-            <input type="checkbox" required>
-            <span>I understand not to include sensitive personal data.</span>
-          </label>
-          <button class="btn btn-primary" type="submit">Send</button>
-          <p class="small muted">Expected response time: 1–2 working days.</p>
-        </form>
-      </div>
+    <div class="card">
+
+      <h2>Mida kirjutada?</h2>
+      <ul class="bullets">
+        <li>Mis vajab korrastamist?</li>
+        <li>Kelle jaoks on vaja ülevaadet? (tiim, partner, KOV, klient)</li>
+        <li>Mis peaks 30 päeva pärast olema “paigas”?</li>
+      </ul>
+
+      <h2 style="margin-top:32px;">Mida mitte kirjutada?</h2>
+      <ul class="bullets">
+        <li>pikk ajalugu</li>
+        <li>tundlik isikuinfo</li>
+        <li>dokumentide kaos copy-paste kujul</li>
+      </ul>
+
     </div>
+
+    <section class="section" style="padding-top:24px;">
+      <a class="btn btn-accent" href="mailto:info@lihtsalttehtud.ee">
+        info@lihtsalttehtud.ee
+      </a>
+    </section>
+
+    <section class="section" style="padding-top:12px;">
+      <p class="muted">
+        Struktuur, mis hoiab tegijate aega ja väärikust.
+      </p>
+    </section>
+
   </section>
 </main>
 </html>

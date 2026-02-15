@@ -1,52 +1,63 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="et" xmlns:th="http://www.thymeleaf.org"
+      th:fragment="layout(content, title, description, canonicalUrl, ogTitle, ogDescription)">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title th:text="${title}">Lihtsalt Tehtud</title>
+  <meta name="description" th:content="${description}">
+  <link rel="canonical" th:href="${canonicalUrl}">
 
-  <meta name="description" content="Calm, practical systems for small teams who just need it handled."/>
-  <link rel="icon" type="image/svg+xml" th:href="@{/assets/check-only.svg}" />
-  <link rel="stylesheet" th:href="@{/styles/main.css}" />
-  <script defer th:src="@{/scripts/main.js}"></script>
+  <!-- Open Graph (Facebook only) -->
+  <meta property="og:locale" content="et_EE">
+  <meta property="og:type" content="website">
+  <meta property="og:title" th:content="${ogTitle}">
+  <meta property="og:description" th:content="${ogDescription}">
+  <meta property="og:url" th:content="${canonicalUrl}">
+  <meta property="og:image" content="/assets/og/lt-og.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/check-badge.svg">
+  <link rel="apple-touch-icon" href="/assets/check-badge.svg">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles/main.css?v=8">
+
+  <!-- Minimal JSON-LD (no fake contact data) -->
+  <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Organization",
+      "name":"Lihtsalt Tehtud",
+      "url":"https://lihtsalttehtud.ee"
+    }
+  </script>
 </head>
+
 <body>
-  <a class="skip" href="#content">Skip to content</a>
+  <a class="skip-link" href="#content">Sisu juurde</a>
 
-  <header th:replace="~{fragments/nav :: nav}"></header>
+  <header class="site-header">
+    <div class="container">
+      <div th:replace="~{fragments/nav :: nav}"></div>
+    </div>
+  </header>
 
-  <main id="content" class="container" th:fragment="content">
-    <!-- page content goes here -->
+  <main id="content" class="site-main" th:replace="${content}">
+    <!-- page content -->
   </main>
 
-  <footer th:replace="~{fragments/footer :: footer}"></footer>
+  <footer class="site-footer">
+    <div class="container">
+      <div th:replace="~{fragments/footer :: footer}"></div>
+    </div>
+  </footer>
 
-  <!-- shared svg symbol -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-      <linearGradient id="badgeGrad" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stop-color="var(--mint)"/>
-        <stop offset="1" stop-color="var(--sage)"/>
-      </linearGradient>
-      <symbol id="lt-check" viewBox="0 0 64 64">
-        <rect x="4" y="4" width="56" height="56" rx="16" fill="url(#badgeGrad)" opacity="0.22"/>
-        <rect x="4.75" y="4.75" width="54.5" height="54.5" rx="15.25" fill="none" stroke="rgba(0,0,0,.10)"/>
-        <path d="M18 34.5 L28.2 44.2 L47 22.8"
-              fill="none"
-              stroke="var(--charcoal)"
-              stroke-width="5.2"
-              stroke-linecap="round"
-              stroke-linejoin="round"/>
-      </symbol>
-      <symbol id="lt-check-only" viewBox="0 0 64 64">
-        <path d="M14.8 34.8 L27.6 47.2 L50.2 20.8"
-              fill="none"
-              stroke="var(--charcoal)"
-              stroke-width="6"
-              stroke-linecap="round"
-              stroke-linejoin="round"/>
-      </symbol>
-    </defs>
-  </svg>
+  <script defer src="/scripts/main.js?v=8"></script>
 </body>
 </html>

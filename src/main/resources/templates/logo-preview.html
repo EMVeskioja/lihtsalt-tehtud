@@ -1,42 +1,10 @@
-<!doctype html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: content}">
-<main class="container">
-  <header class="pagehead">
-    <h1>Logo preview</h1>
-    <p class="lead">Checkmark rendering at multiple sizes (SVG, crisp in browser).</p>
-  </header>
-
-  <section class="section">
-    <div class="cols2">
-      <div class="card">
-        <h2 class="h3">Horizontal</h2>
-        <div class="logo-row">
-          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="#lt-check"></use></svg>
-          <div>
-            <div class="wordmark">Lihtsalt Tehtud</div>
-            <div class="muted small">Done. Checked.</div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <h2 class="h3">Tiny sizes</h2>
-        <div class="tiny-row">
-          <div><div class="muted small">20px</div><svg class="ico s20" viewBox="0 0 64 64" aria-hidden="true"><use href="#lt-check-only"></use></svg></div>
-          <div><div class="muted small">40px</div><svg class="ico s40" viewBox="0 0 64 64" aria-hidden="true"><use href="#lt-check-only"></use></svg></div>
-          <div><div class="muted small">64px</div><svg class="ico s64" viewBox="0 0 64 64" aria-hidden="true"><use href="#lt-check-only"></use></svg></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section soft">
-    <div class="card">
-      <h2 class="h3">UI sample</h2>
-      <div class="pill">
-        <svg class="ico" viewBox="0 0 64 64" aria-hidden="true"><use href="#lt-check-only"></use></svg>
-        <span>Handled.</span>
-      </div>
-    </div>
-  </section>
-</main>
-</html>
+<section xmlns:th="http://www.thymeleaf.org"
+         th:replace="layout :: layout(~{::main},
+  ${title}, ${description}, ${canonicalUrl}, ${ogTitle}, ${ogDescription})">
+  <main class="container">
+    <header class="page-head">
+      <h1>Logo preview (dev)</h1>
+      <p class="lead">Hetkel navist väljas. Hoia fail alles (hiljem vajad).</p>
+    </header>
+  </main>
+</section>

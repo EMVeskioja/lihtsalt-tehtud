@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="et" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout :: layout(~{::main}, ${title}, ${description}, ${canonicalUrl}, ${ogTitle}, ${ogDescription})}">
+<main>
+  <section class="container section">
+
+    <header class="section-head">
+      <h1>Ettevõte</h1>
+      <p class="lead">Et sa teaks hommikul, mis täna teha tuleb.</p>
+    </header>
+
+    <div class="card">
+      <h2>Tundub tuttav?</h2>
+
+      <h3>Iluteenused / salongid</h3>
+      <ul class="bullets">
+        <li>klient broneerib, aga ei ilmu</li>
+        <li>tool jääb tühjaks, raha jääb tulemata</li>
+        <li>helistad järele: “kas tuleb või ei?”</li>
+      </ul>
+
+      <h3>Autoremondikojad</h3>
+      <ul class="bullets">
+        <li>rehvihooaeg: palju kõnesid korraga</li>
+        <li>peast ei mäleta, kellele lubasid tagasi helistada</li>
+        <li>klient küsib: “mis minu autoga tehti?”</li>
+      </ul>
+
+      <h3>Pagarid / pagaritöökojad</h3>
+      <ul class="bullets">
+        <li>terviseameti juhendid on keerulised</li>
+        <li>uus inimene küsib: “kuidas siin asjad käivad?”</li>
+        <li>inspektor tuleb — hakkad pabereid otsima</li>
+      </ul>
+    </div>
+
+    <section class="section" style="padding-top:18px;">
+      <h2>Teeme lihtsaks</h2>
+      <ul class="bullets">
+        <li>broneeringud ja tööülesanded ühes kohas</li>
+        <li>meeldetuletused ei ela enam peas</li>
+        <li>lihtne ülevaade: mis tehtud, mis tegemata</li>
+        <li>juhendid selgelt kirjas, mitte mälus</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <a class="btn btn-accent" href="/contact">Võta ühendust</a>
+    </section>
+
+  </section>
+</main>
+</html>

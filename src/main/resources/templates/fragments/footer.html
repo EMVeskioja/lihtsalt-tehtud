@@ -1,17 +1,17 @@
-<footer class="footer" th:fragment="footer">
-  <div class="container footer-inner">
+<div xmlns:th="http://www.thymeleaf.org" th:fragment="footer" class="footer">
+  <div class="footer-top">
     <div class="footer-left">
-      <div class="footer-brand">
-        <svg class="footer-mark" viewBox="0 0 64 64" aria-hidden="true">
-          <use href="#lt-check-only"></use>
-        </svg>
-        <span>Lihtsalt Tehtud</span>
+      <div class="footer-links">
+        <a href="/mtu">MTÜ</a>
+        <a href="/kov">KOV</a>
+        <a href="/ettevote">Ettevõte</a>
+        <a href="/contact">Kontakt</a>
       </div>
-      <p class="muted">Quiet, practical systems for small teams who just need it handled.</p>
+      <div class="footer-meta">© 2026 Lihtsalt Tehtud OÜ</div>
     </div>
+
     <div class="footer-right">
-      <a th:href="@{/logo-preview}">Logo preview</a>
-      <a th:href="@{/contact}">Contact</a>
+      <div class="footer-slogan"><em>Struktuur, mis hoiab tegijate aega ja väärikust.</em></div>
     </div>
   </div>
-</footer>
+</div>

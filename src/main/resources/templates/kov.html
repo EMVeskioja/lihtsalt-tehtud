@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="et" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout :: layout(~{::main}, ${title}, ${description}, ${canonicalUrl}, ${ogTitle}, ${ogDescription})}">
+<main>
+  <section class="container section">
+
+    <header class="section-head">
+      <h1>KOV</h1>
+      <p class="lead">Selge ülevaade. Vähem edasi-tagasi suhtlust.</p>
+    </header>
+
+    <div class="card">
+      <h2>Tundub tuttav?</h2>
+      <ul class="bullets">
+        <li>info tuleb eri kanalitest ja eri vormis</li>
+        <li>asendaja ei saa aru, kus mis on</li>
+        <li>küsimusele vastamine võtab liiga kaua</li>
+        <li>raportite kogumine on ajakulukas</li>
+      </ul>
+    </div>
+
+    <section class="section" style="padding-top:18px;">
+      <h2>Teeme lihtsaks</h2>
+      <ul class="bullets">
+        <li>üks sissekanal, üks jälgimine</li>
+        <li>staatused ja järgmised sammud nähtavad</li>
+        <li>kuuraport valmis formaadis</li>
+        <li>partneritele ühtne kokkuvõte</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <a class="btn btn-accent" href="/contact">Võta ühendust</a>
+    </section>
+
+  </section>
+</main>
+</html>

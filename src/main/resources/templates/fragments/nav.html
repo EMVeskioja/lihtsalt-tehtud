@@ -1,22 +1,13 @@
-<nav class="nav" th:fragment="nav" aria-label="Primary">
-  <div class="container nav-inner">
-    <a class="brand" th:href="@{/}">
-      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
-        <use href="#lt-check"></use>
-      </svg>
-      <span class="brand-name">Lihtsalt Tehtud</span>
-    </a>
+<nav xmlns:th="http://www.thymeleaf.org" th:fragment="nav" class="nav">
+  <a class="brand" href="/" aria-label="Lihtsalt Tehtud avaleht">
+    <img class="brand-mark" src="/assets/check-badge.svg" alt="" width="22" height="22">
+    <span class="brand-name">Lihtsalt Tehtud</span>
+  </a>
 
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
-      Menu
-    </button>
-
-    <div id="nav-links" class="nav-links">
-      <a th:href="@{/services}">Services</a>
-      <a th:href="@{/pricing}">Packages</a>
-      <a th:href="@{/cases}">Proof</a>
-      <a th:href="@{/eesti-tegijad}">Eesti Tegijad</a>
-      <a class="btn btn-primary" th:href="@{/contact}">Contact</a>
-    </div>
+  <div class="nav-right">
+    <a class="nav-link" href="/mtu">MTÜ</a>
+    <a class="nav-link" href="/kov">KOV</a>
+    <a class="nav-link" href="/ettevote">Ettevõte</a>
+    <a class="btn btn-accent" href="/contact">Võta ühendust</a>
   </div>
 </nav>

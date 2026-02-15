@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="et" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout :: layout(~{::main}, ${title}, ${description}, ${canonicalUrl}, ${ogTitle}, ${ogDescription})}">
+<main>
+  <section class="container section">
+
+    <header class="section-head">
+      <h1>MTÜ</h1>
+      <p class="lead">Struktuur, mis hoiab tegijate aega ja väärikust.</p>
+    </header>
+
+    <div class="card">
+      <h2>Tundub tuttav?</h2>
+      <ul class="bullets">
+        <li>projektid on eri kohtades</li>
+        <li>vabatahtlikud küsivad: “mis seis on?”</li>
+        <li>aruanded tulevad viimasel õhtul</li>
+        <li>annetajale tänu jääb saatmata</li>
+      </ul>
+    </div>
+
+    <section class="section" style="padding-top:18px;">
+      <h2>Teeme lihtsaks</h2>
+      <ul class="bullets">
+        <li>projektid: tähtaeg + staatus ühes kohas</li>
+        <li>annetused: lihtne ülevaade + tänukirja mall</li>
+        <li>aruanded: valmis struktuur, mitte nullist iga kord</li>
+        <li>failid: üks loogiline kaust, mitte “kuskil drive’is”</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <a class="btn btn-accent" href="/contact">Võta ühendust</a>
+    </section>
+
+  </section>
+</main>
+</html>
