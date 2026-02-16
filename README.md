@@ -6,6 +6,7 @@ Minimal, style-pure site:
 ## Run
 ```bash
 mvn spring-boot:run
+.\mvnw.cmd spring-boot:run
 ```
 
 Open:
